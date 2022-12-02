@@ -9,8 +9,6 @@ fn part_1() {
             .map(|l| l.parse::<i32>().unwrap())
             .sum();
 
-        println!("elf = {}", elf_calories);
-
         if elf_calories > highest {
             highest = elf_calories;
         }
@@ -30,8 +28,6 @@ fn part_2() {
             .map(|l| l.parse::<i32>().unwrap())
             .sum();
 
-        println!("elf = {}", elf_calories);
-
         calories.push(elf_calories);
     }
 
@@ -41,9 +37,11 @@ fn part_2() {
     let top_calories: i32 = top3.iter().sum();
 
     println!("top 3 = {:?}", top3);
-    println!("highest = {}", top_calories);
+    println!("combined = {}", top_calories);
 }
 
 fn main() {
+    part_1();
+    println!("-----");
     part_2();
 }
