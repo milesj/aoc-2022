@@ -1,4 +1,4 @@
 [workspace]
 resolver = "2"
 members = ["crates/*"]
-default-members = ["crates/day-4"]
+default-members = ["crates/day-5"]
