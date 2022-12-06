@@ -1,4 +1,4 @@
-fn is_all_diff_chars(marker: &str) -> bool {
+fn is_all_diff_chars_u8(marker: &[u8]) -> bool {
     let mut o = 0;
     let mut i;
 
@@ -21,40 +21,26 @@ fn is_all_diff_chars(marker: &str) -> bool {
 
 fn part_1() {
     let data = include_str!("input.txt");
-    let mut index = 0;
 
-    for (o, _) in data.char_indices() {
-        let i = o + 1;
-
-        if i < 4 {
-            continue;
-        }
-
-        if is_all_diff_chars(&data[(i - 4)..i]) {
-            index = i;
-            break;
-        }
-    }
+    let index = data
+        .as_bytes()
+        .windows(4)
+        .position(|set| is_all_diff_chars_u8(&set))
+        .unwrap()
+        + 4;
 
     println!("marker index = {}", index);
 }
 
 fn part_2() {
     let data = include_str!("input.txt");
-    let mut index = 0;
 
-    for (o, _) in data.char_indices() {
-        let i = o + 1;
-
-        if i < 14 {
-            continue;
-        }
-
-        if is_all_diff_chars(&data[(i - 14)..i]) {
-            index = i;
-            break;
-        }
-    }
+    let index = data
+        .as_bytes()
+        .windows(14)
+        .position(|set| is_all_diff_chars_u8(&set))
+        .unwrap()
+        + 14;
 
     println!("marker index = {}", index);
 }
