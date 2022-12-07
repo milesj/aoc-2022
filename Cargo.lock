@@ -3,25 +3,5 @@
 version = 3
 
 [[package]]
-name = "aoc_1"
-version = "0.1.0"
-
-[[package]]
-name = "aoc_2"
-version = "0.1.0"
-
-[[package]]
-name = "aoc_3"
-version = "0.1.0"
-
-[[package]]
-name = "aoc_4"
-version = "0.1.0"
-
-[[package]]
-name = "aoc_5"
-version = "0.1.0"
-
-[[package]]
-name = "aoc_6"
+name = "aoc_7"
 version = "0.1.0"
