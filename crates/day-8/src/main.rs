@@ -195,7 +195,6 @@ impl<'l> Forest<'l> {
             }
 
             below += 1;
-
             by += 1;
         }
 
